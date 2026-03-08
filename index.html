@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Instagram</title>
+</head>
+<body>
+
+ <nav class="navbar navbar-light bg-light border-bottom px-4">
+    <span class="navbar-brand fw-bold">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </span>
+
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#postModal">
+        Crear Nuevo Post
+      </button>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Perfil</a></li>
+          <li><a class="dropdown-item" href="#">Configuracion</a></li>
+          <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#">Salir</a></li>
+        </ul>
+      </div>
+    </div>
+ </nav>
+
+ <input type="radio" id="vista-horizontal" name="vista" checked>
+ <input type="radio" id="vista-vertical" name="vista">
+
+ <div class="container text-center mt-3 iconos">
+    <label for="vista-horizontal" class="me-3">
+      <i class="fa-solid fa-table-cells"></i>
+    </label>
+    <label for="vista-vertical">
+      <i class="fa-solid fa-square"></i>
+    </label>
+ </div>
+
+
+ <div class="container mt-4 vista-horizontal">
+    <div class="row g-3 mb-3">
+      <div class="col-4"><img src="https://cdndeportes.com.do/wp-content/uploads/2018/11/Cristiano-Ronaldo-juventud.jpg" class="img-fluid"></div>
+      <div class="col-4"><img src="https://media.revistagq.com/photos/5ca5f82533e7513c28153622/1:1/w_900,h_900,c_limit/cristiano_ronaldo_psg_9305.jpg" class="img-fluid"></div>
+      <div class="col-4"><img src="https://media.gq.com.mx/photos/66774829c12a54a09ddc8b23/1:1/w_2012,h_2012,c_limit/Cristiano%20Ronaldo.jpg" class="img-fluid"></div>
+      <div class="col-4"><img src="https://fotografias.lasexta.com/clipping/cmsimages01/2021/09/29/AF97A066-6966-42D7-B7F5-5DC5364BC421/104.jpg?crop=2784,2784,x484,y0&width=1200&height=1200&optimize=low&format=webply" class="img-fluid"></div>
+      <div class="col-4"><img src="https://www.infobae.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-wordpress-client-uploads%2Finfobae-wp%2Fwp-content%2Fuploads%2F2017%2F01%2F07112742%2Fcristiano-ronaldo-balon-de-oro-1920-1.jpg?auth=39f3459cec6b76a861e8d9b3b7166dc943cc454e0d4d765e425645fee2d5a7d4&smart=true&width=1200&height=1200&quality=85" class="img-fluid"></div>
+      <div class="col-4"><img src="https://ds-images.bolavip.com/news/image/800/800/?src=https://images.redgol.cl/webp/full/RDG_20250608_RDG_1081963_GettyImages-2219217423-scaled-e1749424298346.webp" class="img-fluid"></div>
+    </div>
+ </div>
+
+
+ <div class="container mt-4 vista-vertical">
+    <div class="card mb-4">
+      <div class="card-header d-flex justify-content-between">
+        <strong>JUVENTUS</strong>
+        <small class="text-muted">09/15</small>
+      </div>
+      <img src="https://cdndeportes.com.do/wp-content/uploads/2018/11/Cristiano-Ronaldo-juventud.jpg" class="img-fluid">
+      <div class="card-body">
+        <strong>2.231.769 Likes</strong>
+        <p class="mb-0">¡Gracias a todos los hinchas de Juventus por su apoyo!</p>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header d-flex justify-content-between">
+        <strong>REAL MADRID</strong>
+        <small class="text-muted">04/13</small>
+      </div>
+      <img src="https://media.revistagq.com/photos/5ca5f82533e7513c28153622/1:1/w_900,h_900,c_limit/cristiano_ronaldo_psg_9305.jpg" class="img-fluid">
+      <div class="card-body">
+        <strong>1.788.982 Likes</strong>
+        <p class="mb-0">Buen partido en contra de Fc Barcelona, ¡Gracias por su apoyo!</p>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header d-flex justify-content-between">
+        <strong>PORTUGAL</strong>
+        <small class="text-muted">03/10</small>
+      </div>
+      <img src="https://media.gq.com.mx/photos/66774829c12a54a09ddc8b23/1:1/w_2012,h_2012,c_limit/Cristiano%20Ronaldo.jpg" class="img-fluid">
+      <div class="card-body">
+        <strong>1.345.678 Likes</strong>
+        <p class="mb-0">Mi primer gol con la camiseta de Portugal, ¡Gracias por su apoyo!</p>
+      </div>
+    </div>
+ </div>
+
+ <div class="modal fade" id="postModal">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5>Crear Nuevo Post</h5>
+         <button class="btn-close" data-bs-dismiss="modal"></button>
+       </div>
+       <div class="modal-body">
+         <textarea class="form-control" placeholder="Escribe un comentario..."></textarea>
+       </div>
+       <div class="modal-footer">
+         <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+         <button class="btn btn-success">Publicar</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
